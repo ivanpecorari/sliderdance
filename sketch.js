@@ -4,7 +4,7 @@ var angle = 0;
 function setup() {
   noCanvas();
   //createCanvas(200,200);
-  for (var i = 0; i < 50; i++) {
+  for (var i = 0; i < 200; i++) {
     sliders[i] = createSlider(0, 255, 50);
   }
 
@@ -20,17 +20,17 @@ function adjustSlider() {
 }
 }
 
-// function draw() {
+function draw() {
 
-//   var offset= 0;
+  var offset= 0;
 
-//   for (var i = 0; i < sliders.length; i++) {
-//     var x = map(sin(angle+offset), -1, 1, 0, 255);
-//     sliders[i].value(x);
-//     //background(slider.value())
+  for (var i = 0; i < sliders.length; i++) {
+    var x = map(sin(angle+offset), -1, 1, 0, 255);
+    sliders[i].value(x);
+    //background(slider.value())
 
-//     offset=offset+0.25;
-//   }
-//   angle += 0.25;
+    offset=offset+0.25;
+  }
+  angle += 0.1;
 
-// }
+}
